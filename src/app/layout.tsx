@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "1999 Mimarlik",
-  description: "1999 Mimarlik",
+  title: "1999 Mimarlık",
+  description: "1999 Mimarlık",
 };
 
 export default function RootLayout({
