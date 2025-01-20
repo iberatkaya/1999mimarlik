@@ -2,33 +2,6 @@
 
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
-import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import Link from "next/link";
-
-const scrollToSection = (
-  direction: "up" | "down",
-  currentSection: HTMLElement
-) => {
-  const sections = Array.from(document.querySelectorAll("section"));
-  const currentIndex = sections.indexOf(currentSection);
-
-  let targetSection;
-  if (direction === "up") {
-    // If we're at the first section, go to the last one
-    targetSection =
-      currentIndex === 0
-        ? sections[sections.length - 1]
-        : sections[currentIndex - 1];
-  } else {
-    // If we're at the last section, go to the first one
-    targetSection =
-      currentIndex === sections.length - 1
-        ? sections[0]
-        : sections[currentIndex + 1];
-  }
-
-  targetSection.scrollIntoView({ behavior: "smooth" });
-};
 
 const categories = [
   {
@@ -68,7 +41,8 @@ const categories = [
 export default function Projects() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleCategoryClick = (id: string) => {};
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const handleCategoryClick = (_id: string) => {};
 
   return (
     <div className="flex flex-col h-screen bg-black">
