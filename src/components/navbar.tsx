@@ -14,6 +14,12 @@ interface NavbarProps {
   onMenuToggle?: (p: boolean) => void;
 }
 
+export const defaultNavLinks = [
+  { name: "Home", href: "/dev" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
+];
+
 export default function Navbar({ title, navLinks, onMenuToggle }: NavbarProps) {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);

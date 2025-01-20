@@ -1,31 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/navbar";
+import Navbar, { defaultNavLinks } from "@/components/navbar";
 
 export default function Contact() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navLinks = [
-    {
-      name: "Projects",
-      href: "/dev",
-    },
-    {
-      name: "About",
-      href: "/about",
-    },
-    {
-      name: "Contact",
-      href: "/contact",
-    },
-  ];
 
   return (
     <div className="flex flex-col h-screen bg-black">
       <Navbar
         title="1999 Mimarlık"
-        navLinks={navLinks}
+        navLinks={defaultNavLinks}
         onMenuToggle={setIsMenuOpen}
       />
 
@@ -43,7 +28,7 @@ export default function Contact() {
             sustainable architecture.
           </h2>
           <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {defaultNavLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -73,6 +58,13 @@ export default function Contact() {
 
               <div>
                 <h2 className="text-xl font-semibold mb-2">Email</h2>
+                <a
+                  href="mailto:info@1999mimarlik.com"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  info@1999mimarlik.com
+                </a>
+                <br />
                 <a
                   href="mailto:aygun@1999mimarlik.com"
                   className="text-gray-400 hover:text-white transition-colors"

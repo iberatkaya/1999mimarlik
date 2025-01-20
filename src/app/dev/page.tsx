@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "@/components/navbar";
+import Navbar, { defaultNavLinks } from "@/components/navbar";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const scrollToSection = (
@@ -32,17 +32,11 @@ const scrollToSection = (
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Projects", href: "/dev" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
-
   return (
     <div className="flex flex-col h-screen bg-black">
       {/* Mobile Navbar */}
       <Navbar
-        navLinks={navLinks}
+        navLinks={defaultNavLinks}
         title="1999 Mimarlık"
         onMenuToggle={setIsMenuOpen}
       />
@@ -63,7 +57,7 @@ export default function Home() {
             sustainable architecture.
           </h2>
           <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {defaultNavLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
