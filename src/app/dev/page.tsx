@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Navbar from "@/components/navbar";
 
 export default function Home() {
-  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
@@ -13,17 +11,6 @@ export default function Home() {
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
-
-  const handleLinkClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent default anchor behavior
-    setIsMenuOpen(false); // Close the menu
-
-    // Get the href and navigate to the page
-    const href = (e.currentTarget as HTMLAnchorElement).getAttribute("href");
-    if (href) {
-      router.push(href);
-    }
-  };
 
   return (
     <div className="flex flex-col h-screen bg-black">
