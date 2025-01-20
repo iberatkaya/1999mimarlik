@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "Projects", href: "/projects" },
+    { name: "Projects", href: "/dev" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -27,67 +28,11 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen bg-black">
       {/* Mobile Navbar */}
-      <div className="md:hidden fixed top-0 left-0 right-0 bg-black z-50 p-4 border-b border-zinc-800">
-        <div className="flex justify-between items-center">
-          <h1 className="text-white text-xl tracking-tight">1999 Mimarlık</h1>
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white p-2 hover:bg-zinc-800 rounded-md transition-colors"
-          >
-            {isMenuOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu Dropdown */}
-        <div
-          className={`${
-            isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          } 
-            absolute top-full left-0 right-0 bg-black border-b border-zinc-800
-            transition-all duration-300 ease-in-out`}
-        >
-          <nav className="flex flex-col p-4">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={handleLinkClick}
-                className="text-gray-400 hover:text-white py-3 transition-colors text-sm"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </div>
+      <Navbar
+        navLinks={navLinks}
+        title="1999 Mimarlık"
+        onMenuToggle={setIsMenuOpen}
+      />
 
       {/* Main Content with Animation */}
       <div
