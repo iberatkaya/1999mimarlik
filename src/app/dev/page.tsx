@@ -2,6 +2,32 @@
 
 import { useState } from "react";
 import Navbar from "@/components/navbar";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+
+const scrollToSection = (
+  direction: "up" | "down",
+  currentSection: HTMLElement
+) => {
+  const sections = Array.from(document.querySelectorAll("section"));
+  const currentIndex = sections.indexOf(currentSection);
+
+  let targetSection;
+  if (direction === "up") {
+    // If we're at the first section, go to the last one
+    targetSection =
+      currentIndex === 0
+        ? sections[sections.length - 1]
+        : sections[currentIndex - 1];
+  } else {
+    // If we're at the last section, go to the first one
+    targetSection =
+      currentIndex === sections.length - 1
+        ? sections[0]
+        : sections[currentIndex + 1];
+  }
+
+  targetSection.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,9 +87,27 @@ export default function Home() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            {/* Content */}
-            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-2 mt-[64px] sm:mt-0 bg-black max-w-[320px] whitespace-normal">
+            {/* Content with Navigation Arrows */}
+            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-2 mt-[64px] sm:mt-0 bg-black max-w-[320px] whitespace-normal flex items-center gap-2">
+              <button
+                onClick={(e) =>
+                  scrollToSection("up", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Previous section"
+              >
+                <IoIosArrowUp size={20} />
+              </button>
               Kocaeli Serbest Bölgesi Akyacht Genişleme Projesi Temel İnşaat
+              <button
+                onClick={(e) =>
+                  scrollToSection("down", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Next section"
+              >
+                <IoIosArrowDown size={20} />
+              </button>
             </div>
           </section>
           <section
@@ -75,9 +119,27 @@ export default function Home() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <h2 className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black">
+            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
+              <button
+                onClick={(e) =>
+                  scrollToSection("up", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Previous section"
+              >
+                <IoIosArrowUp size={20} />
+              </button>
               İzmit Kapanca Otel
-            </h2>
+              <button
+                onClick={(e) =>
+                  scrollToSection("down", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Next section"
+              >
+                <IoIosArrowDown size={20} />
+              </button>
+            </div>
           </section>
           <section
             className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 before:bg-black/40"
@@ -88,9 +150,27 @@ export default function Home() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <h2 className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black">
+            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
+              <button
+                onClick={(e) =>
+                  scrollToSection("up", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Previous section"
+              >
+                <IoIosArrowUp size={20} />
+              </button>
               Kocaeli Sanayi Odası Ek Bina
-            </h2>
+              <button
+                onClick={(e) =>
+                  scrollToSection("down", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Next section"
+              >
+                <IoIosArrowDown size={20} />
+              </button>
+            </div>
           </section>
           <section
             className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 before:bg-black/40"
@@ -101,14 +181,50 @@ export default function Home() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <h2 className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black">
+            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
+              <button
+                onClick={(e) =>
+                  scrollToSection("up", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Previous section"
+              >
+                <IoIosArrowUp size={20} />
+              </button>
               Kocaeli Serbest Bölge Hangar 3
-            </h2>
+              <button
+                onClick={(e) =>
+                  scrollToSection("down", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Next section"
+              >
+                <IoIosArrowDown size={20} />
+              </button>
+            </div>
           </section>
           <section className="h-screen snap-start bg-zinc-500 flex flex-col items-end p-6 md:p-12">
-            <h2 className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black">
+            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
+              <button
+                onClick={(e) =>
+                  scrollToSection("up", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Previous section"
+              >
+                <IoIosArrowUp size={20} />
+              </button>
               Section 5
-            </h2>
+              <button
+                onClick={(e) =>
+                  scrollToSection("down", e.currentTarget.closest("section")!)
+                }
+                className="p-2 hover:bg-white/20 rounded transition-colors"
+                aria-label="Next section"
+              >
+                <IoIosArrowDown size={20} />
+              </button>
+            </div>
           </section>
         </div>
       </div>
