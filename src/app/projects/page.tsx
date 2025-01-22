@@ -59,37 +59,11 @@ export default function Projects() {
           isMenuOpen ? "transform translate-y-40" : "transform translate-y-0"
         }`}
       >
-        {/* Fixed Sidebar - hidden on mobile */}
-        <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
-          <h1 className="text-white text-3xl tracking-tight mb-3">
-            1999 Mimarlık
-          </h1>
-          <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
-            Creating distinctive spaces through innovative design and
-            sustainable architecture.
-          </h2>
-          <nav className="flex flex-col gap-4">
-            {defaultNavLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-400 hover:text-white transition-colors tracking-wide"
-              >
-                {link.name}
-              </a>
-            ))}
-          </nav>
-        </div>
-
-        {/* Main Content */}
-        <div
-          className={`flex-1 transition-transform duration-300 ease-in-out ${
-            isMenuOpen ? "transform translate-y-40" : "transform translate-y-0"
-          }`}
-        >
-          <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
+        <div className="flex min-h-screen">
+          {/* Sidebar */}
+          <div className="hidden md:flex flex-col fixed w-72 h-full bg-black p-8">
             <h1 className="text-white text-3xl tracking-tight mb-3">
-              1999 Mimarlık
+              <span className="font-['Arial']">1999 Mimarlık</span>
             </h1>
             <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
               Creating distinctive spaces through innovative design and
@@ -108,14 +82,15 @@ export default function Projects() {
             </nav>
           </div>
 
-          <div className="md:ml-48 min-h-screen bg-zinc-900 text-white p-6 pt-24 md:p-12">
-            <div className="max-w-4xl mx-auto">
+          {/* Main Content */}
+          <div className="flex-1 md:ml-24 min-h-screen bg-zinc-900 text-white">
+            <div className="max-w-4xl mx-auto p-6 md:p-12">
               <h1 className="text-3xl font-bold tracking-tight mb-8">
                 Projects
               </h1>
-              <div>
+              <div className="grid gap-6">
                 {categories.map((category, index) => (
-                  <div key={index} className="space-y-3 mb-2 inline-block">
+                  <div key={index} className="space-y-3">
                     <div
                       onClick={() => handleCategoryClick(category.id)}
                       className="cursor-pointer hover:opacity-80"

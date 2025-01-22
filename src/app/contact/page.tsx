@@ -21,7 +21,7 @@ export default function Contact() {
       >
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
           <h1 className="text-white text-3xl tracking-tight mb-3">
-            1999 Mimarlık
+            <span className="font-['Arial']">1999 Mimarlık</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
             Creating distinctive spaces through innovative design and
@@ -42,7 +42,7 @@ export default function Contact() {
         <div className="md:ml-48 min-h-screen bg-zinc-900 text-white p-6 pt-24 md:p-12">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl font-bold tracking-tight mb-8">
-              Nasuh Mert AYGÜN
+              Contact Information
             </h1>
             <div className="space-y-6">
               <div>
@@ -54,6 +54,20 @@ export default function Contact() {
                   <br />
                   Turkey
                 </p>
+                {/* Google Maps iframe */}
+                <div className="mt-4 w-full md:w-[70%] aspect-video rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.799034230893!2d29.926661776537752!3d40.77231897142701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb5001c0b2b6ed%3A0x33534f2d47be514a!2sKocaeli%20Chamber%20of%20Industry!5e0!3m2!1sen!2str!4v1704334206799!5m2!1sen!2str"
+                    width="100%"
+                    className="opacity-80 hover:opacity-100 transition-opacity"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Office Location"
+                  />
+                </div>
               </div>
 
               <div>

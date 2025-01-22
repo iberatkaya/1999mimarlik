@@ -50,7 +50,7 @@ export default function Home() {
         {/* Fixed Sidebar - hidden on mobile */}
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
           <h1 className="text-white text-3xl tracking-tight mb-3">
-            1999 Mimarlık
+            <span className="font-['Arial']">1999 Mimarlık</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
             Creating distinctive spaces through innovative design and
@@ -73,7 +73,7 @@ export default function Home() {
         <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
           {/* Add top padding on mobile for navbar */}
           <section
-            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 before:bg-black/40"
+            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0"
             style={{
               backgroundImage: "url('/p1.jpg')",
               backgroundPosition: "center",
@@ -105,7 +105,7 @@ export default function Home() {
             </div>
           </section>
           <section
-            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 before:bg-black/40"
+            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0"
             style={{
               backgroundImage: "url('/p2.jpg')",
               backgroundPosition: "center",
@@ -136,7 +136,7 @@ export default function Home() {
             </div>
           </section>
           <section
-            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 before:bg-black/40"
+            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0"
             style={{
               backgroundImage: "url('/p3.jpg')",
               backgroundPosition: "center",
@@ -167,7 +167,7 @@ export default function Home() {
             </div>
           </section>
           <section
-            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 before:bg-black/40"
+            className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0"
             style={{
               backgroundImage: "url('/p4.jpg')",
               backgroundPosition: "center",
