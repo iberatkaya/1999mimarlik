@@ -30,7 +30,7 @@ const scrollToSection = (
   targetSection.scrollIntoView({ behavior: "smooth" });
 };
 
-export default function Home() {
+export default function Dev() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

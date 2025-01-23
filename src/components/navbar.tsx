@@ -16,9 +16,16 @@ interface NavbarProps {
 }
 
 export const defaultNavLinks = [
-  { name: "Home", href: "/dev" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  ...(typeof window !== "undefined" && window.location.pathname === "/dev"
+    ? [
+        { name: "Home", href: "/dev" },
+        { name: "Projects", href: "/projects" },
+        { name: "Contact", href: "/contact" },
+      ]
+    : [
+        { name: "Home", href: "/" },
+        { name: "Contact", href: "/contact" },
+      ]),
 ];
 
 export default function Navbar({ title, navLinks, onMenuToggle }: NavbarProps) {
