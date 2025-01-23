@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
+import Image from "next/image";
 
 const categories = [
   {
@@ -62,7 +63,14 @@ export default function Projects() {
         <div className="flex min-h-screen">
           {/* Sidebar */}
           <div className="hidden md:flex flex-col fixed w-72 h-full bg-black p-8">
-            <h1 className="text-white text-3xl tracking-tight mb-3">
+            <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
+              <Image
+                src="/logo.jpg"
+                alt="Logo"
+                width={32}
+                height={32}
+                style={{ marginRight: "4px" }}
+              />
               <span className="font-['Arial']">1999 Mimarlık</span>
             </h1>
             <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">

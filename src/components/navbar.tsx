@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface NavLink {
   name: string;
@@ -42,7 +43,16 @@ export default function Navbar({ title, navLinks, onMenuToggle }: NavbarProps) {
   return (
     <div className="md:hidden fixed top-0 left-0 right-0 bg-black z-50 p-4 border-b border-zinc-800">
       <div className="flex justify-between items-center">
-        <h1 className="text-white text-l tracking-tight">{title}</h1>
+        <h1 className="text-white text-xl tracking-tight flex items-center">
+          <Image
+            src="/logo.jpg"
+            alt="Logo"
+            width={24}
+            height={24}
+            style={{ marginRight: "4px" }}
+          />
+          <span className="font-['Arial']">{title}</span>
+        </h1>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="text-white p-2 hover:bg-zinc-800 rounded-md transition-colors"
@@ -91,7 +101,7 @@ export default function Navbar({ title, navLinks, onMenuToggle }: NavbarProps) {
               key={link.name}
               href={link.href}
               onClick={handleLinkClick}
-              className="text-gray-400 hover:text-white py-3 transition-colors text-xs"
+              className="text-gray-400 hover:text-white py-3 transition-colors text-base"
             >
               {link.name}
             </a>

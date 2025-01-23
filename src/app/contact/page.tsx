@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
+import Image from "next/image";
 
 export default function Contact() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,14 @@ export default function Contact() {
         }`}
       >
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
-          <h1 className="text-white text-3xl tracking-tight mb-3">
+          <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
+            <Image
+              src="/logo.jpg"
+              alt="Logo"
+              width={32}
+              height={32}
+              style={{ marginRight: "4px" }}
+            />
             <span className="font-['Arial']">1999 Mimarlık</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
@@ -57,7 +65,7 @@ export default function Contact() {
                 {/* Google Maps iframe */}
                 <div className="mt-4 w-full md:w-[70%] aspect-video rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3019.799034230893!2d29.926661776537752!3d40.77231897142701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb5001c0b2b6ed%3A0x33534f2d47be514a!2sKocaeli%20Chamber%20of%20Industry!5e0!3m2!1sen!2str!4v1704334206799!5m2!1sen!2str"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5403645082843!2d29.936742711735814!3d40.76076023450964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4568a5555555%3A0x9593ffebc22d9857!2sKocaeli%20Chamber%20of%20Industry!5e0!3m2!1sen!2sus!4v1737593234900!5m2!1sen!2sus"
                     width="100%"
                     className="opacity-80 hover:opacity-100 transition-opacity"
                     height="100%"

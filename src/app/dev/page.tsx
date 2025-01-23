@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import Image from "next/image";
 
 const scrollToSection = (
   direction: "up" | "down",
@@ -49,7 +50,14 @@ export default function Home() {
       >
         {/* Fixed Sidebar - hidden on mobile */}
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
-          <h1 className="text-white text-3xl tracking-tight mb-3">
+          <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
+            <Image
+              src="/logo.jpg"
+              alt="Logo"
+              width={32}
+              height={32}
+              style={{ marginRight: "4px" }}
+            />
             <span className="font-['Arial']">1999 Mimarlık</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
@@ -92,7 +100,9 @@ export default function Home() {
               >
                 <IoIosArrowUp size={20} />
               </button>
-              Kocaeli Serbest Bölgesi Akyacht Genişleme Projesi Temel İnşaat
+              <span className="font-['Arial']">
+                Kocaeli Serbest Bölgesi Akyacht Genişleme Projesi Temel İnşaat
+              </span>
               <button
                 onClick={(e) =>
                   scrollToSection("down", e.currentTarget.closest("section")!)
@@ -123,7 +133,7 @@ export default function Home() {
               >
                 <IoIosArrowUp size={20} />
               </button>
-              İzmit Kapanca Otel
+              <span className="font-['Arial']">İzmit Kapanca Otel</span>
               <button
                 onClick={(e) =>
                   scrollToSection("down", e.currentTarget.closest("section")!)
@@ -154,7 +164,9 @@ export default function Home() {
               >
                 <IoIosArrowUp size={20} />
               </button>
-              Kocaeli Sanayi Odası Ek Bina
+              <span className="font-['Arial']">
+                Kocaeli Sanayi Odası Ek Bina
+              </span>
               <button
                 onClick={(e) =>
                   scrollToSection("down", e.currentTarget.closest("section")!)
@@ -185,30 +197,9 @@ export default function Home() {
               >
                 <IoIosArrowUp size={20} />
               </button>
-              Kocaeli Serbest Bölge Hangar 3
-              <button
-                onClick={(e) =>
-                  scrollToSection("down", e.currentTarget.closest("section")!)
-                }
-                className="p-2 hover:bg-white/20 rounded transition-colors"
-                aria-label="Next section"
-              >
-                <IoIosArrowDown size={20} />
-              </button>
-            </div>
-          </section>
-          <section className="h-screen snap-start bg-zinc-500 flex flex-col items-end p-6 md:p-12">
-            <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
-              <button
-                onClick={(e) =>
-                  scrollToSection("up", e.currentTarget.closest("section")!)
-                }
-                className="p-2 hover:bg-white/20 rounded transition-colors"
-                aria-label="Previous section"
-              >
-                <IoIosArrowUp size={20} />
-              </button>
-              Section 5
+              <span className="font-['Arial']">
+                Kocaeli Serbest Bölge Hangar 3
+              </span>
               <button
                 onClick={(e) =>
                   scrollToSection("down", e.currentTarget.closest("section")!)
