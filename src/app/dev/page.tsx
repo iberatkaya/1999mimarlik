@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import Image from "next/image";
 
 const scrollToSection = (
   direction: "up" | "down",
@@ -51,13 +50,6 @@ export default function Dev() {
         {/* Fixed Sidebar - hidden on mobile */}
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
           <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
-            <Image
-              src="/logo.jpg"
-              alt="Logo"
-              width={32}
-              height={32}
-              style={{ marginRight: "4px" }}
-            />
             <span className="font-['Arial']">1999 Mimarlık</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">

@@ -22,13 +22,6 @@ export default function Contact() {
       >
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
           <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
-            <Image
-              src="/logo.jpg"
-              alt="Logo"
-              width={32}
-              height={32}
-              style={{ marginRight: "4px" }}
-            />
             <span className="font-['Arial']">1999 Mimarlık</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
@@ -40,8 +33,17 @@ export default function Contact() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-400 hover:text-white transition-colors tracking-wide"
+                className="text-gray-400 hover:text-white transition-colors tracking-wide flex items-center"
               >
+                <Image
+                  src="/logo.jpg"
+                  alt="Logo"
+                  width={24}
+                  height={24}
+                  priority={true}
+                  loading="eager"
+                  style={{ marginRight: "6px" }}
+                />
                 {link.name}
               </a>
             ))}
@@ -56,18 +58,19 @@ export default function Contact() {
               <div>
                 <h2 className="text-xl font-semibold mb-2">Address</h2>
                 <p className="text-gray-400">
-                  Karabas Mah. Salim Dervisoglu Cad. Fuar içi, Sanayi Odasi,
+                  Karabas Mah. Salim Dervisoglu Cad. Fuar içi, Kocaeli Sanayi
+                  Odası,
                   <br />
                   Izmit / Kocaeli
                   <br />
                   Turkey
                 </p>
                 {/* Google Maps iframe */}
-                <div className="mt-4 w-full md:w-[70%] aspect-video rounded-lg overflow-hidden">
+                <div className="mt-4 w-full md:w-[70%] aspect-video ">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.5403645082843!2d29.936742711735814!3d40.76076023450964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb4568a5555555%3A0x9593ffebc22d9857!2sKocaeli%20Chamber%20of%20Industry!5e0!3m2!1sen!2sus!4v1737593234900!5m2!1sen!2sus"
-                    width="100%"
-                    className="opacity-80 hover:opacity-100 transition-opacity"
+                    width="72%"
+                    className="opacity-80 hover:opacity-100 transition-opacity rounded-lg overflow-hidden"
                     height="100%"
                     style={{ border: 0 }}
                     allowFullScreen={false}

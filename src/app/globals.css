@@ -36,5 +36,18 @@ body {
 }
 
 .animate-pulse {
-  animation: pulsate 4s ease-in-out infinite;
+  animation: pulsate 2s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
 }
