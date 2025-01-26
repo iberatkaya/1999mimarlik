@@ -20,12 +20,13 @@ export const defaultNavLinks = [
     ? [
         { name: "Home", href: "/dev" },
         { name: "Projects", href: "/projects" },
+        { name: "About", href: "/about" },
         { name: "Contact", href: "/contact" },
       ]
     : [
         { name: "Home", href: "/" },
-        { name: "Contact", href: "/contact" },
         { name: "About", href: "/about" },
+        { name: "Contact", href: "/contact" },
       ]),
 ];
 

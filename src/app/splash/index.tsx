@@ -2,21 +2,26 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const SPLASH_TIMEOUT = 2000; // 2 seconds for splash display
-const REVISIT_TIMEOUT = 300000; // 10 minutes
+const REVISIT_TIMEOUT = 300000; // 5 minutes
 
 interface SplashScreenProps {
   onComplete: () => void;
 }
 
+export const shouldShowSplash = (currentTimeInMS?: number) => {
+  const lastVisit = localStorage.getItem("lastVisit");
+  const muCurrentTime = currentTimeInMS ?? Date.now();
+  return !lastVisit || muCurrentTime - parseInt(lastVisit) > REVISIT_TIMEOUT;
+};
+
 const SplashScreen = ({ onComplete }: SplashScreenProps) => {
   const [showSplash, setShowSplash] = useState(false);
 
   useEffect(() => {
-    const lastVisit = localStorage.getItem("lastVisit");
-    const currentTime = Date.now();
     let timer: NodeJS.Timeout;
+    const currentTime: number = Date.now();
 
-    if (!lastVisit || currentTime - parseInt(lastVisit) > REVISIT_TIMEOUT) {
+    if (shouldShowSplash(currentTime)) {
       setShowSplash(true);
       localStorage.setItem("lastVisit", currentTime.toString());
 

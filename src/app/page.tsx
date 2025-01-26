@@ -4,6 +4,7 @@ import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import Image from "next/image";
+import SplashScreen from "./splash";
 
 const scrollToSection = (
   direction: "up" | "down",
@@ -32,16 +33,13 @@ const scrollToSection = (
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [isSplashComplete, setIsSplashComplete] = useState(false);
+  const [isSplashComplete, setIsSplashComplete] = useState(false);
 
   return (
     <div className="flex flex-col h-screen bg-black">
       {/* Hide main content until splash is complete */}
-      <div
-      // className={`${
-      //   isSplashComplete ? "opacity-100" : "opacity-0"
-      // } transition-opacity duration-500`}
-      >
+      <SplashScreen onComplete={() => setIsSplashComplete(true)} />
+      <div className={`${isSplashComplete ? "opacity-100" : "opacity-0"}`}>
         <Navbar
           navLinks={defaultNavLinks}
           title="1999 Mimarlık"
