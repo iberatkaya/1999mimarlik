@@ -25,6 +25,7 @@ export const defaultNavLinks = [
     : [
         { name: "Home", href: "/" },
         { name: "Contact", href: "/contact" },
+        { name: "About", href: "/about" },
       ]),
 ];
 
