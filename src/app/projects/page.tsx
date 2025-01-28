@@ -21,7 +21,7 @@ type Category = {
   }[];
 };
 
-export const categories: Category[] = [
+const categories: Category[] = [
   {
     title: "All Categories",
     href: "/projects/all",
