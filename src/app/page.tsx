@@ -86,11 +86,11 @@ export default function Home() {
           {/* Scrollable Main Content */}
           <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
             <section
-              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0"
+              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72"
               style={{
                 backgroundImage: "url('/p2.jpg')",
                 backgroundPosition: "center",
-                backgroundSize: "cover",
+                backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
               }}
             >
@@ -117,11 +117,11 @@ export default function Home() {
               </div>
             </section>
             <section
-              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0"
+              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72"
               style={{
                 backgroundImage: "url('/p3.jpg')",
                 backgroundPosition: "center",
-                backgroundSize: "cover",
+                backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
               }}
             >
