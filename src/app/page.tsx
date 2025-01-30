@@ -86,19 +86,21 @@ export default function Home() {
           {/* Scrollable Main Content */}
           <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
             <section
-              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72"
+              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72 cursor-pointer"
               style={{
-                backgroundImage: "url('/p3.jpg')",
+                backgroundImage: "url('/p11.jpg')",
                 backgroundPosition: "center",
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
               }}
+              onClick={() => (window.location.href = "/projects/sanayi-odasi")}
             >
               <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
                 <button
-                  onClick={(e) =>
-                    scrollToSection("up", e.currentTarget.closest("section")!)
-                  }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    scrollToSection("up", e.currentTarget.closest("section")!);
+                  }}
                   className="p-2 hover:bg-white/20 rounded transition-colors"
                   aria-label="Previous section"
                 >
@@ -108,9 +110,13 @@ export default function Home() {
                   Kocaeli Sanayi Odası Ek Bina
                 </span>
                 <button
-                  onClick={(e) =>
-                    scrollToSection("down", e.currentTarget.closest("section")!)
-                  }
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    scrollToSection(
+                      "down",
+                      e.currentTarget.closest("section")!
+                    );
+                  }}
                   className="p-2 hover:bg-white/20 rounded transition-colors"
                   aria-label="Next section"
                 >
