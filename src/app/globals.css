@@ -63,3 +63,17 @@ body {
     scrollbar-width: none; /* Firefox */
   }
 }
+
+@media (min-width: 768px) {
+  .bg-position-size {
+    background-position: right;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg-position-size {
+    background-position: center;
+    background-size: cover;
+  }
+}

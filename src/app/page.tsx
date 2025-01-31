@@ -86,11 +86,9 @@ export default function Home() {
           {/* Scrollable Main Content */}
           <div className="h-screen snap-y snap-mandatory overflow-y-scroll">
             <section
-              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72 cursor-pointer"
+              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72 cursor-pointer bg-position-size"
               style={{
-                backgroundImage: "url('/p11.jpg')",
-                backgroundPosition: "center",
-                backgroundSize: "contain",
+                backgroundImage: "url('/p11.webp')",
                 backgroundRepeat: "no-repeat",
               }}
               onClick={() => (window.location.href = "/projects/sanayi-odasi")}
@@ -126,11 +124,9 @@ export default function Home() {
             </section>
 
             <section
-              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72"
+              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72 bg-position-size"
               style={{
                 backgroundImage: "url('/p2.jpg')",
-                backgroundPosition: "center",
-                backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
               }}
             >

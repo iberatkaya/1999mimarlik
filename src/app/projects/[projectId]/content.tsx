@@ -4,6 +4,8 @@ import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
 import Image from "next/image";
 import Link from "next/link";
+import Zoom from "react-medium-image-zoom";
+import "../../react-medium-image-zoom.css";
 
 export default function ProjectPageContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,28 +79,25 @@ export default function ProjectPageContent() {
 
                 {/* Right Column - Scrollable Images */}
                 <div
-                  className={`${
-                    isMenuOpen ? "hidden" : "block"
-                  } md:h-[85vh] md:overflow-y-auto no-scrollbar w-full`}
+                  className={`md:h-[85vh] md:overflow-y-auto no-scrollbar w-full`}
                 >
                   <div className="grid gap-4 max-w-full md:pr-4">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((_, index) => (
-                      <div
-                        key={index}
-                        className="bg-zinc-800 rounded-lg aspect-video -mx-2 md:mx-0"
-                      >
-                        <div className="w-full h-full flex items-center justify-center text-gray-500 relative">
-                          <Image
-                            src={`/p1${index + 1}.jpg`}
-                            alt={`Project Image ${index + 1}`}
-                            width={600}
-                            height={338}
-                            className="w-full h-full object-cover rounded-lg"
-                            sizes="(max-width: 768px) 100vw, 66vw"
-                            priority={index === 0}
-                          />
+                      <Zoom key={index}>
+                        <div className="bg-zinc-800 rounded-lg aspect-video -mx-2 md:mx-0">
+                          <div className="w-full h-full flex items-center justify-center text-gray-500 relative">
+                            <Image
+                              src={`/p1${index + 1}.webp`}
+                              alt={`Project Image ${index + 1}`}
+                              width={600}
+                              height={338}
+                              className="w-full h-full object-cover rounded-lg"
+                              sizes="(max-width: 768px) 100vw, 66vw"
+                              priority={index === 0}
+                            />
+                          </div>
                         </div>
-                      </div>
+                      </Zoom>
                     ))}
                   </div>
                 </div>
