@@ -54,9 +54,9 @@ export default function ProjectPageContent() {
 
         {/* Main Content */}
         <div className="md:ml-48 min-h-screen bg-zinc-900 text-white p-6 pt-24 md:pt-12 md:pl-0 md:pr-0">
-          <div className="max-w-4xl mx-auto">
-            <div className="p-6 md:pt-12 md:px-12 md:pr-0">
-              <div className="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-8">
+          <div className="md:ml-48 md:mr-0">
+            <div className="px-6 pt-6 md:pt-12 md:px-12 md:pr-0">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-4">
                 {/* Left Column - Project Links */}
                 <div>
                   <h1 className="text-3xl font-bold tracking-tight mb-8">
@@ -79,7 +79,7 @@ export default function ProjectPageContent() {
                 <div
                   className={`${
                     isMenuOpen ? "hidden" : "block"
-                  } md:h-[85vh] md:overflow-y-auto md:scrollbar-thin md:scrollbar-thumb-gray-600 md:scrollbar-track-gray-900 w-full`}
+                  } md:h-[85vh] md:overflow-y-auto no-scrollbar w-full`}
                 >
                   <div className="grid gap-4 max-w-full md:pr-4">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((_, index) => (
