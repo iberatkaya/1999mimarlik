@@ -67,7 +67,7 @@ export default function ProjectPageContent() {
                   <div className="grid gap-6"></div>
                   <div className="text-gray-400 hover:text-white transition-colors cursor-pointer mb-4">
                     <Link href="/projects/sanayi-odasi" className="text-lg">
-                      Kocaeli Sanayi Odası Ek Bina
+                      Kocaeli Sanayi Odası B Blok
                     </Link>
                   </div>
                   {/* <div className="text-gray-400 hover:text-white transition-colors cursor-pointer">

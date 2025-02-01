@@ -105,7 +105,7 @@ export default function Home() {
                   <IoIosArrowUp size={20} />
                 </button>
                 <span className="font-['Arial']">
-                  Kocaeli Sanayi Odası Ek Bina
+                  Kocaeli Sanayi Odası B Blok
                 </span>
                 <button
                   onClick={(e) => {
