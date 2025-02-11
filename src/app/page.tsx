@@ -122,6 +122,44 @@ export default function Home() {
                 </button>
               </div>
             </section>
+
+            <section
+              className="h-screen snap-start relative flex flex-col items-end p-6 md:p-12 before:content-[''] before:absolute before:inset-0 md:ml-72 cursor-pointer bg-position-size"
+              style={{
+                backgroundImage: "url('/p21.webp')",
+                backgroundRepeat: "no-repeat",
+              }}
+              onClick={() => (window.location.href = "/projects/eximbank")}
+            >
+              <div className="text-white text-sm tracking-tight relative z-10 py-2 px-4 mt-[64px] sm:mt-0 bg-black flex items-center gap-2">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    scrollToSection("up", e.currentTarget.closest("section")!);
+                  }}
+                  className="p-2 hover:bg-white/20 rounded transition-colors"
+                  aria-label="Previous section"
+                >
+                  <IoIosArrowUp size={20} />
+                </button>
+                <span className="font-['Arial']">
+                  Eximbank Kocaeli İrtibat Ofisi
+                </span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    scrollToSection(
+                      "down",
+                      e.currentTarget.closest("section")!
+                    );
+                  }}
+                  className="p-2 hover:bg-white/20 rounded transition-colors"
+                  aria-label="Next section"
+                >
+                  <IoIosArrowDown size={20} />
+                </button>
+              </div>
+            </section>
           </div>
         </div>
       </div>

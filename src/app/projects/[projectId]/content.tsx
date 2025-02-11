@@ -6,9 +6,32 @@ import Image from "next/image";
 import Link from "next/link";
 import Zoom from "react-medium-image-zoom";
 import "../../react-medium-image-zoom.css";
+import { useParams } from "next/navigation";
 
 export default function ProjectPageContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const params = useParams<{ projectId: string }>();
+
+  const getProjectType = () => {
+    if (params.projectId === "sanayi-odasi") {
+      return { id: "sanayi-odasi", imageCount: 8 };
+    } else if (params.projectId === "eximbank") {
+      return { id: "eximbank", imageCount: 5 };
+    }
+
+    return null;
+  };
+
+  const getProjectImages = () => {
+    const projectType = getProjectType();
+    if (!projectType) return [];
+
+    return Array.from({ length: projectType.imageCount }, (_, index) => {
+      return `/p${projectType.id === "sanayi-odasi" ? "1" : "2"}${
+        index + 1
+      }.webp`;
+    });
+  };
 
   return (
     <div className="flex flex-col h-screen bg-black">
@@ -70,11 +93,12 @@ export default function ProjectPageContent() {
                       Kocaeli Sanayi Odası B Blok
                     </Link>
                   </div>
-                  {/* <div className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                    <Link href="/projects/kapanca-otel" className="text-lg">
-                      İzmit Kapanca Otel
+
+                  <div className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                    <Link href="/projects/eximbank" className="text-lg">
+                      Eximbank Kocaeli İrtibat Ofisi
                     </Link>
-                  </div> */}
+                  </div>
                 </div>
 
                 {/* Right Column - Scrollable Images */}
@@ -82,12 +106,12 @@ export default function ProjectPageContent() {
                   className={`md:h-[85vh] md:overflow-y-auto no-scrollbar w-full`}
                 >
                   <div className="grid gap-4 max-w-full md:pr-4">
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((_, index) => (
+                    {getProjectImages().map((i, index) => (
                       <Zoom key={index}>
                         <div className="bg-zinc-800 rounded-lg aspect-video -mx-2 md:mx-0">
                           <div className="w-full h-full flex items-center justify-center text-gray-500 relative">
                             <Image
-                              src={`/p1${index + 1}.webp`}
+                              src={i}
                               alt={`Project Image ${index + 1}`}
                               width={600}
                               height={338}

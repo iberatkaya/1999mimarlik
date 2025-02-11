@@ -2,7 +2,7 @@ import ProjectPageContent from "./content";
 
 export const generateStaticParams = () => [
   { projectId: "sanayi-odasi" },
-  { projectId: "kapanca-otel" },
+  { projectId: "eximbank" },
 ];
 
 export default function ProjectPage() {
