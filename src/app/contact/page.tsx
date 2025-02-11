@@ -107,6 +107,32 @@ export default function Contact() {
                   +90 531 318 94 31
                 </a>
               </div>
+
+              <div>
+                <h2 className="text-xl font-semibold mb-2">Social Media</h2>
+                <div className="space-y-2">
+                  <div>
+                    <a
+                      href="https://instagram.com/1999mimarlik"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      @1999mimarlik on Instagram
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href="https://x.com/1999mimarlik"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      @1999mimarlik on X
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
