@@ -131,6 +131,16 @@ export default function Contact() {
                       @1999mimarlik on X
                     </a>
                   </div>
+                  <div>
+                    <a
+                      href="https://www.linkedin.com/company/1999mimarlik"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      1999mimarlik on LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

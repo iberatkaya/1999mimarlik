@@ -88,13 +88,20 @@ export default function ProjectPageContent() {
                     Projects
                   </h1>
                   <div className="grid gap-6"></div>
-                  <div className="text-gray-400 hover:text-white transition-colors cursor-pointer mb-4">
+                  <div className="text-white transition-colors cursor-pointer mb-4">
                     <Link href="/projects/sanayi-odasi" className="text-lg">
                       Kocaeli Sanayi Odası B Blok
                     </Link>
+
+                    {/* {params.projectId === "sanayi-odasi" && (
+                      <p className="text-md text-gray-400 mt-2">
+                        Creating distinctive spaces through innovative design
+                        and sustainable architecture.
+                      </p>
+                    )} */}
                   </div>
 
-                  <div className="text-gray-400 hover:text-white transition-colors cursor-pointer">
+                  <div className="text-white transition-colors cursor-pointer">
                     <Link href="/projects/eximbank" className="text-lg">
                       Eximbank Kocaeli İrtibat Ofisi
                     </Link>
