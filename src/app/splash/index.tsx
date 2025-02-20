@@ -42,7 +42,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
 
   return (
     <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
-      <div className="text-white text-4xl font-['Arial'] animate-fade-in">
+      <div className="text-white text-4xl font-serif animate-fade-in">
         <Image
           src="/logo.jpg"
           width={64}
