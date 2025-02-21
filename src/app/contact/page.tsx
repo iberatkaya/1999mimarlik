@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col h-screen bg-black">
       <Navbar
-        title="1999 Mimarlık"
+        title="1999 Architects"
         navLinks={defaultNavLinks}
         onMenuToggle={setIsMenuOpen}
       />
@@ -22,7 +22,7 @@ export default function Contact() {
       >
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
           <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
-            <span className="font-serif">1999 Mimarlık</span>
+            <span className="font-serif">1999 Architects</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
             Creating distinctive spaces through innovative design and

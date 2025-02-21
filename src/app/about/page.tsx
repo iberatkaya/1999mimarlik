@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div className="flex flex-col h-screen bg-black">
       <Navbar
-        title="1999 Mimarlık"
+        title="1999 Architects"
         navLinks={defaultNavLinks}
         onMenuToggle={setIsMenuOpen}
       />
@@ -22,7 +22,7 @@ export default function About() {
       >
         <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
           <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
-            <span className="font-serif">1999 Mimarlık</span>
+            <span className="font-serif">1999 Architects</span>
           </h1>
           <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
             Creating distinctive spaces through innovative design and
@@ -62,7 +62,7 @@ export default function About() {
                 approach at the university, he studied for a semester at
                 Universita degli Studi di Sassari in Alghero, Sardinia, Italy in
                 2020. After returning to Turkey, he continued his career by
-                establishing 1999 Mimarlık in 2025 after gaining experience in
+                establishing 1999 Architects in 2025 after gaining experience in
                 different projects in various public and private workplaces.
               </p>
               <br />
