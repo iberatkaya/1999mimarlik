@@ -44,7 +44,7 @@ export default function Navbar({ title, navLinks, onMenuToggle }: NavbarProps) {
   return (
     <div className="md:hidden fixed top-0 left-0 right-0 bg-black z-50 p-4 border-b border-zinc-800">
       <div className="flex justify-between items-center">
-        <h1 className="text-white text-xl tracking-tight flex items-center">
+        <h1 className="text-white text-xl tracking-tight flex items-center ml-2">
           <span className="font-serif">{title}</span>
         </h1>
         <button
