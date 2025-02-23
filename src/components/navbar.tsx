@@ -17,7 +17,7 @@ interface NavbarProps {
 
 export const defaultNavLinks = [
   { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
+  { name: "Works", href: "/projects" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

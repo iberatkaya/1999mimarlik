@@ -51,13 +51,9 @@ export default function ProjectPageContent() {
           <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
             <span className="font-serif">1999 Architects</span>
           </h1>
-          <p className="text-gray-400 text-sm tracking-wide mb-4">
+          <p className="text-gray-400 text-sm tracking-wide mb-8">
             Project • Construction • Consultancy
           </p>
-          <h2 className="text-gray-400 text-base tracking-wide leading-relaxed mb-12">
-            Creating distinctive spaces through innovative design and
-            sustainable architecture.
-          </h2>
           <nav className="flex flex-col gap-4">
             {defaultNavLinks.map((link) => (
               <a
@@ -88,7 +84,7 @@ export default function ProjectPageContent() {
                 {/* Left Column - Project Links */}
                 <div>
                   <h1 className="text-3xl font-bold tracking-tight mb-8">
-                    Projects
+                    Works
                   </h1>
                   <div className="grid gap-6"></div>
                   <div className="text-white transition-colors cursor-pointer mb-4">
