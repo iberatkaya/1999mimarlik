@@ -17,6 +17,8 @@ export default function ProjectPageContent() {
       return { id: "sanayi-odasi", imageCount: 8 };
     } else if (params.projectId === "eximbank") {
       return { id: "eximbank", imageCount: 5 };
+    } else if (params.projectId === "teknopark") {
+      return { id: "teknopark", imageCount: 5 };
     }
 
     return null;
@@ -27,9 +29,16 @@ export default function ProjectPageContent() {
     if (!projectType) return [];
 
     return Array.from({ length: projectType.imageCount }, (_, index) => {
-      return `/p${projectType.id === "sanayi-odasi" ? "1" : "2"}${
-        index + 1
-      }.webp`;
+      switch (projectType.id) {
+        case "sanayi-odasi":
+          return `/p1${index + 1}.webp`;
+        case "eximbank":
+          return `/p2${index + 1}.webp`;
+        case "teknopark":
+          return `/p3${index + 1}.webp`;
+        default:
+          return "";
+      }
     });
   };
 
@@ -100,9 +109,15 @@ export default function ProjectPageContent() {
                     )} */}
                   </div>
 
-                  <div className="text-white transition-colors cursor-pointer">
+                  <div className="text-white transition-colors cursor-pointer mb-4">
                     <Link href="/projects/eximbank" className="text-lg">
                       Eximbank Kocaeli İrtibat Ofisi
+                    </Link>
+                  </div>
+
+                  <div className="text-white transition-colors cursor-pointer">
+                    <Link href="/projects/teknopark" className="text-lg">
+                      Teknopark Model Fabrika
                     </Link>
                   </div>
                 </div>
