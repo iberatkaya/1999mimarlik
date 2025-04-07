@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
 import Image from "next/image";
@@ -23,6 +24,36 @@ export default function ProjectPageContent() {
 
     return null;
   };
+
+  // Define projects with their metadata
+  const projects = [
+    {
+      id: "sanayi-odasi",
+      title: "Kocaeli Sanayi Odası B Blok",
+      description:
+        "Since 2023, the project, which has been controlled and implemented by 1999 Architects, has a total area of 7200 m2, including 1200 m2 session area.\nThe control and implementation of the architectural and mechanical works, and the control of the electrical works were carried out by us.\nIn the building has a curtain aluminum glass facade system, and the basement floor is considered as a parking lot, while the ground floor is considered as an expo area. The intermediate floors have an office design, and a restaurant is planned on the roof floor.\nThe architectural project belongs to Olbia Architecture and the implementation was done by our partner Segay.",
+    },
+    {
+      id: "eximbank",
+      title: "Eximbank Kocaeli İrtibat Ofisi",
+      description:
+        "Eximbank Kocaeli İrtibat Ofisi is an office project located in Kocaeli Chamber of Industry A Block. The interior architecture, electrical lines, and data lines' project revisions and implementation were worked on by us. This office consists of a work area of ​​approximately 30 m2 area for 2 personnel, a meeting area, and special sections belonging to the bank.",
+    },
+    {
+      id: "teknopark",
+      title: "Teknopark Model Fabrika",
+      description:
+        "The construction and electrical implementation of the project located in Kocaeli University Technopark campus in Başiskele was carried out by Segay, while the layout planning was done by 1999 Architects.",
+      //"Başiskele’de Kocaeli Üniversitesi Teknopark kampüsünde yer alan projenin inşaat ve elektrik uygulaması Segay tarafından yapılırken yerleşim planlaması tarafımızca yapılmıştır.",
+    },
+  ];
+
+  // Sort projects to put the current one at the top
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.id === params.projectId) return -1;
+    if (b.id === params.projectId) return 1;
+    return 0;
+  });
 
   const getProjectImages = () => {
     const projectType = getProjectType();
@@ -96,30 +127,34 @@ export default function ProjectPageContent() {
                     Works
                   </h1>
                   <div className="grid gap-6"></div>
-                  <div className="text-white transition-colors cursor-pointer mb-4">
-                    <Link href="/projects/sanayi-odasi" className="text-lg">
-                      Kocaeli Sanayi Odası B Blok
-                    </Link>
 
-                    {/* {params.projectId === "sanayi-odasi" && (
-                      <p className="text-md text-gray-400 mt-2">
-                        Creating distinctive spaces through innovative design
-                        and sustainable architecture.
-                      </p>
-                    )} */}
-                  </div>
+                  {sortedProjects.map((project) => (
+                    <div
+                      key={project.id}
+                      className="text-white transition-colors cursor-pointer mb-4"
+                    >
+                      <Link
+                        href={`/projects/${project.id}`}
+                        className="text-lg"
+                      >
+                        {project.title}
+                      </Link>
 
-                  <div className="text-white transition-colors cursor-pointer mb-4">
-                    <Link href="/projects/eximbank" className="text-lg">
-                      Eximbank Kocaeli İrtibat Ofisi
-                    </Link>
-                  </div>
-
-                  <div className="text-white transition-colors cursor-pointer">
-                    <Link href="/projects/teknopark" className="text-lg">
-                      Teknopark Model Fabrika
-                    </Link>
-                  </div>
+                      {params.projectId === project.id &&
+                        project.description && (
+                          <p className="text-md text-gray-400 mt-2">
+                            {project.description.split("\n").map((text, i) => (
+                              <React.Fragment key={i}>
+                                {text}
+                                {i !==
+                                  project.description.split("\n").length -
+                                    1 && <br />}
+                              </React.Fragment>
+                            ))}
+                          </p>
+                        )}
+                    </div>
+                  ))}
                 </div>
 
                 {/* Right Column - Scrollable Images */}
