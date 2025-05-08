@@ -42,7 +42,7 @@ export default function Home() {
       <div className={`${isSplashComplete ? "opacity-100" : "opacity-0"}`}>
         <Navbar
           navLinks={defaultNavLinks}
-          title="1999 Architects"
+          title="1999"
           onMenuToggle={setIsMenuOpen}
         />
 
@@ -55,7 +55,7 @@ export default function Home() {
           {/* Fixed Sidebar - hidden on mobile */}
           <div className="hidden md:block w-72 fixed h-full bg-black p-8 z-50">
             <h1 className="text-white text-3xl tracking-tight mb-3 flex items-center">
-              <span className="font-serif">1999 Architects</span>
+              <span className="font-serif">1999</span>
             </h1>
             <p className="text-gray-400 text-sm tracking-wide mb-8">
               Project • Construction • Consultancy
