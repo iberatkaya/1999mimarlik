@@ -31,7 +31,7 @@ export default function ProjectPageContent() {
       id: "sanayi-odasi",
       title: "Kocaeli Sanayi Odası B Blok",
       description:
-        "Since 2023, the project, which has been controlled and implemented by 1999 Architects, has a total area of 7200 m2, including 1200 m2 session area.\nThe control and implementation of the architectural and mechanical works, and the control of the electrical works were carried out by us.\nIn the building has a curtain aluminum glass facade system, and the basement floor is considered as a parking lot, while the ground floor is considered as an expo area. The intermediate floors have an office design, and a restaurant is planned on the roof floor.\nThe architectural project belongs to Olbia Architecture and the implementation was done by our partner Segay.",
+        "Since 2023, the project, which has been controlled and implemented by 1999 Architects, has a total area of 7200 m2, including 1200 m2 session area.\nThe control and implementation of the architectural and mechanical works, and the control of the electrical works were carried out by us.\nIn the building has a curtain aluminum glass facade system, and the basement floor is considered as a parking lot, while the ground floor is considered as an expo area. The intermediate floors have an office design, and a restaurant is planned on the roof floor.\nThe architectural project belongs to Olbia Architecture and the implementation was done by Segay.",
     },
     {
       id: "eximbank",
@@ -101,15 +101,6 @@ export default function ProjectPageContent() {
                 href={link.href}
                 className="text-gray-400 hover:text-white transition-colors tracking-wide flex items-center"
               >
-                <Image
-                  src="/logo.jpg"
-                  alt="Logo"
-                  width={24}
-                  height={24}
-                  priority={true}
-                  loading="eager"
-                  style={{ marginRight: "6px" }}
-                />
                 {link.name}
               </a>
             ))}

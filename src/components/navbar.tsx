@@ -97,15 +97,6 @@ export default function Navbar({ title, navLinks, onMenuToggle }: NavbarProps) {
               onClick={handleLinkClick}
               className="text-gray-400 hover:text-white mb-4 transition-colors text-base tracking-wide flex items-center"
             >
-              <Image
-                src="/logo.jpg"
-                alt="Logo"
-                width={20}
-                height={20}
-                priority={true}
-                loading="eager"
-                style={{ marginRight: "8px" }}
-              />
               {link.name}
             </a>
           ))}

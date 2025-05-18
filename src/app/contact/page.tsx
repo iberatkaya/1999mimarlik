@@ -34,15 +34,6 @@ export default function Contact() {
                 href={link.href}
                 className="text-gray-400 hover:text-white transition-colors tracking-wide flex items-center"
               >
-                <Image
-                  src="/logo.jpg"
-                  alt="Logo"
-                  width={24}
-                  height={24}
-                  priority={true}
-                  loading="eager"
-                  style={{ marginRight: "6px" }}
-                />
                 {link.name}
               </a>
             ))}
