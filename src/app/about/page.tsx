@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
-import Image from "next/image";
 
 export default function About() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

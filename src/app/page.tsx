@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Navbar, { defaultNavLinks } from "@/components/navbar";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import Image from "next/image";
 import SplashScreen from "./splash";
 
 const scrollToSection = (
