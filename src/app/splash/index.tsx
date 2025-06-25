@@ -44,11 +44,11 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
     <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
       <div className="text-white text-4xl font-serif animate-fade-in">
         <Image
-          src="/logo.jpg"
+          src="/splash_logo.jpg"
           width={64}
           height={64}
           alt="1999 Architects Logo"
-          className="w-36 h-36 animate-pulse"
+          className="w-48 h-48 animate-pulse"
         />
       </div>
     </div>
