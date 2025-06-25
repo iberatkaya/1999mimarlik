@@ -41,7 +41,7 @@ export default function ProjectPageContent() {
     },
     {
       id: "teknopark",
-      title: "Kocaeli Model Fabrika A.Ş",
+      title: "Kocaeli Model Fabrika A.Ş.",
       description:
         "The construction and electrical implementation of the project located in Kocaeli University Technopark campus in Başiskele was carried out by Segay, while the layout planning was done by 1999 Architects.",
       //"Başiskele’de Kocaeli Üniversitesi Teknopark kampüsünde yer alan projenin inşaat ve elektrik uygulaması Segay tarafından yapılırken yerleşim planlaması tarafımızca yapılmıştır.",
