@@ -43,7 +43,7 @@ export default function ProjectPageContent() {
       id: "teknopark",
       title: "Kocaeli Model Fabrika AŞ",
       description:
-        "The construction and electrical implementation of the project located on the Kocaeli University Technopark campus in Başiskele were carried out by the Kocaeli Chamber of Industry, while the supervision of the construction, electrical, and landscaping works, as well as the layout planning, were undertaken by 1999.",
+        "The construction and electrical implementation of the 1000 m² project located on the Kocaeli University Technopark campus in Başiskele were carried out by the Kocaeli Chamber of Industry, while the supervision of the construction, electrical, and landscaping works, as well as the layout planning, were undertaken by 1999.",
       //"Başiskele’de Kocaeli Üniversitesi Teknopark kampüsünde yer alan projenin inşaat ve elektrik uygulaması Segay tarafından yapılırken yerleşim planlaması tarafımızca yapılmıştır.",
     },
   ];
