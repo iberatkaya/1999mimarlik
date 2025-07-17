@@ -79,12 +79,6 @@ export default function Contact() {
                   info@1999mimarlik.com
                 </a>
                 <br />
-                <a
-                  href="mailto:aygun@1999mimarlik.com"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  aygun@1999mimarlik.com
-                </a>
               </div>
 
               <div>
@@ -127,7 +121,7 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      1999mimarlik on LinkedIn
+                      1999 on LinkedIn
                     </a>
                   </div>
                 </div>

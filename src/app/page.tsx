@@ -167,7 +167,7 @@ export default function Home() {
                 >
                   <IoIosArrowUp size={20} />
                 </button>
-                <span className="font-serif">Kocaeli Model Fabrika A.Ş.</span>
+                <span className="font-serif">Kocaeli Model Fabrika AŞ</span>
                 <button
                   onClick={(e) => {
                     e.stopPropagation();

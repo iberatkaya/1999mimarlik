@@ -51,8 +51,8 @@ export default function About() {
                 approach at the university, he studied for a semester at
                 Universita degli Studi di Sassari in Alghero, Sardinia, Italy in
                 2020. After returning to Turkey, he continued his career by
-                establishing 1999 Architects in 2025 after gaining experience in
-                different projects in various public and private workplaces.
+                establishing 1999 in 2025 after gaining experience in different
+                projects in various public and private workplaces.
               </p>
               <br />
               <p className="text-gray-400">

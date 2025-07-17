@@ -31,7 +31,7 @@ export default function ProjectPageContent() {
       id: "sanayi-odasi",
       title: "Kocaeli Sanayi Odası B Blok",
       description:
-        "Since 2023, the project, which has been controlled and implemented by 1999 Architects, has a total area of 7200 m2, including 1200 m2 session area.\nThe control and implementation of the architectural and mechanical works, and the control of the electrical works were carried out by us.\nIn the building has a curtain aluminum glass facade system, and the basement floor is considered as a parking lot, while the ground floor is considered as an expo area. The intermediate floors have an office design, and a restaurant is planned on the roof floor.\nThe architectural project belongs to Olbia Architecture and the implementation was done by Segay.",
+        "Since 2023, the project, which has been controlled and implemented by 1999, has a total area of 7200 m2, including 1200 m2 session area.\nThe control and implementation of the architectural and mechanical works, and the control of the electrical works were carried out by us.\nIn the building has a curtain aluminum glass facade system, and the basement floor is considered as a parking lot, while the ground floor is considered as an expo area. The intermediate floors have an office design, and a restaurant is planned on the roof floor.\nThe architectural project belongs to Olbia Architecture and the implementation was done by Segay.",
     },
     {
       id: "eximbank",
@@ -41,9 +41,9 @@ export default function ProjectPageContent() {
     },
     {
       id: "teknopark",
-      title: "Kocaeli Model Fabrika A.Ş.",
+      title: "Kocaeli Model Fabrika AŞ",
       description:
-        "The construction and electrical implementation of the project located in Kocaeli University Technopark campus in Başiskele was carried out by Segay, while the layout planning was done by 1999 Architects.",
+        "The construction and electrical implementation of the project located on the Kocaeli University Technopark campus in Başiskele were carried out by the Kocaeli Chamber of Industry, while the supervision of the construction, electrical, and landscaping works, as well as the layout planning, were undertaken by 1999.",
       //"Başiskele’de Kocaeli Üniversitesi Teknopark kampüsünde yer alan projenin inşaat ve elektrik uygulaması Segay tarafından yapılırken yerleşim planlaması tarafımızca yapılmıştır.",
     },
   ];

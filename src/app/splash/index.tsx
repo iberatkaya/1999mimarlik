@@ -47,7 +47,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
           src="/splash_logo.jpg"
           width={64}
           height={64}
-          alt="1999 Architects Logo"
+          alt="1999 Logo"
           className="w-48 h-48 animate-pulse"
         />
       </div>
