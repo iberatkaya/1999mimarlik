@@ -20,6 +20,8 @@ export default function ProjectPageContent() {
       return { id: "eximbank", imageCount: 5 };
     } else if (params.projectId === "teknopark") {
       return { id: "teknopark", imageCount: 5 };
+    } else if (params.projectId === "savunma") {
+      return { id: "savunma", imageCount: 6 };
     }
 
     return null;
@@ -46,6 +48,13 @@ export default function ProjectPageContent() {
         "The construction and electrical implementation of the 1000 m² project located on the Kocaeli University Technopark campus in Başiskele were carried out by the Kocaeli Chamber of Industry, while the supervision of the construction, electrical, and landscaping works, as well as the layout planning, were undertaken by 1999.",
       //"Başiskele’de Kocaeli Üniversitesi Teknopark kampüsünde yer alan projenin inşaat ve elektrik uygulaması Segay tarafından yapılırken yerleşim planlaması tarafımızca yapılmıştır.",
     },
+    {
+      id: "savunma",
+      title: "Kocaeli Savunma Sanayi AŞ",
+      description:
+        "Kocaeli Savunma Sanayi AŞ was established as a subsidiary of the Kocaeli Chamber of Industry. Located within the Kocaeli University Technopark in Yeniköy, this office covers approximately 1000 m². The architectural design and implementation were carried out by 1999.",
+      //"Başiskele’de Kocaeli Üniversitesi Teknopark kampüsünde yer alan projenin inşaat ve elektrik uygulaması Segay tarafından yapılırken yerleşim planlaması tarafımızca yapılmıştır.",
+    },
   ];
 
   // Sort projects to put the current one at the top
@@ -67,6 +76,8 @@ export default function ProjectPageContent() {
           return `/p2${index + 1}.webp`;
         case "teknopark":
           return `/p3${index + 1}.webp`;
+        case "savunma":
+          return `/p4${index + 1}.webp`;
         default:
           return "";
       }
