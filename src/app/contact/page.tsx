@@ -47,8 +47,7 @@ export default function Contact() {
               <div>
                 <h2 className="text-xl font-semibold mb-2">Address</h2>
                 <p className="text-gray-400">
-                  Karabas Mah. Salim Dervisoglu Cad. Fuar içi, Kocaeli Sanayi
-                  Odası,
+                  Karabas Mah. Sanayi Fuari 2. Cad. No: 4
                   <br />
                   Izmit / Kocaeli
                   <br />
